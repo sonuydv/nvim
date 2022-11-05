@@ -22,9 +22,9 @@ call plug#begin()
   Plug 'vim-airline/vim-airline'
   Plug 'morhetz/gruvbox'
   Plug 'wuelnerdotexe/vim-enfocado'
-  Plug 'tc50cal/vim-terminal'
   Plug 'rafi/awesome-vim-colorschemes'
   Plug 'neoclide/coc.nvim' 
+  Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 call plug#end()
 
 "show results from terminal commands within vim!
@@ -38,8 +38,6 @@ set termguicolors
 "set background=dark
 " let g:enfocado_style = 'nature'
 " colorscheme slate
-
-
 
 
 "Nerdtree custom key binding
@@ -204,3 +202,18 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 "-----CocCompletionEngineConfig#End--------------
+
+
+"-------ToggleTermConfig#Start------------------
+lua require("toggleterm").setup{}
+
+"TerminalToggleConfig#Start----------
+autocmd TermEnter term://*toggleterm#*
+      \ tnoremap <silent><c-t> <Cmd>exe v:count1 . "ToggleTerm"<CR>
+
+" By applying the mappings this way you can pass a count to your
+" mapping to open a specific window.
+" For example: 2<C-t> will open terminal 2
+nnoremap <silent><c-t> <Cmd>exe v:count1 . "ToggleTerm"<CR>
+inoremap <silent><c-t> <Esc><Cmd>exe v:count1 . "ToggleTerm"<CR>
+"TerminalToggleConfig#End---------------
