@@ -25,7 +25,8 @@ call plug#begin()
   Plug 'rafi/awesome-vim-colorschemes'
   Plug 'neoclide/coc.nvim' 
   Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
-call plug#end()
+  Plug 'ctrlpvim/ctrlp.vim'
+  call plug#end()
 
 "show results from terminal commands within vim!
 set t_ti= t_te= 
@@ -217,3 +218,8 @@ autocmd TermEnter term://*toggleterm#*
 nnoremap <silent><c-t> <Cmd>exe v:count1 . "ToggleTerm"<CR>
 inoremap <silent><c-t> <Esc><Cmd>exe v:count1 . "ToggleTerm"<CR>
 "TerminalToggleConfig#End---------------
+
+" colorscheme minimalist
+" colorscheme solarized8_high
+"
+colorscheme ayu
