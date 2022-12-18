@@ -10,6 +10,23 @@ set mouse=a
 " colorscheme slate
 
 
+"Search ignoring case
+set ignorecase
+"Smart ignore case searching
+set smartcase
+"Spell checking
+" set spell spelllang=en_us
+"Persists undo changes
+set undofile
+"Clear searched term by click esc
+nnoremap <esc> :noh<return><esc>
+
+
+
+
+
+
+
 set  t_Co=256
 "setting font nerd
 set guifont=<Your\ Nerd\ Font>
