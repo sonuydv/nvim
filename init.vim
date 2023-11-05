@@ -40,7 +40,7 @@ call plug#begin()
   Plug 'morhetz/gruvbox'
   Plug 'wuelnerdotexe/vim-enfocado'
   Plug 'rafi/awesome-vim-colorschemes'
-  Plug 'neoclide/coc.nvim' 
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
   Plug 'ctrlpvim/ctrlp.vim'
   call plug#end()
